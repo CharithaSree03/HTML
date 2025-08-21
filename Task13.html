@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas</title>
+        <style>
+            h1{
+                text-align: center;
+                background-color: brown;
+            }
+            canvas{
+                border: 2px solid rgb(151, 151, 231);
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Canvas:</h1>
+        <canvas id="myCanvas" height="500px" width="500px">
+            <script>
+                var canvas=document.getElementById("myCanvas");
+                var C=canvas.getContext("2d");
+                C.fillStyle="skyblue";
+                C.fillRect(300,50,300,100);
+                C.beginPath();
+                C.moveTo(0,0);
+                C.lineTo(100,350);
+                C.strokeStyle="red";
+                C.stroke();
+                C.beginPath();
+                C.arc(150,150,150,0,2*Math.PI);
+                C.strokeStyle="skyblue";
+                C.stroke();
+                C.font="80px Arial";
+                C.strokeText("Hello",80,180);
+                C.fillStyle="yellow";
+                C.fillText("DS",350,400);
+                C.font="15px verdana";
+                C.fillStyle="pink";
+                C.strokeText("2D using Canvas",120,240);
+                C.fillStyle="black";
+                C.fillText("Cyber Security",10,125);
+            </script>
+        </canvas>
+    </body>
+</html>

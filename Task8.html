@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Social Media Registration</title>
+<style>
+    body{
+        background-color: #1688d4;
+    }
+    h1{
+        text-align: center;
+        background-color: red;
+        color: white;
+    }
+    form{
+        margin: auto;
+        height: 300px;
+        width: 450px;
+    }
+</style>
+</head>
+<body>
+    <h1>Social Media Registration:</h1>
+<form>
+  <fieldset>
+    <legend>Sign Up:</legend>
+    <p>
+      <label for="Name"><b>Name:</b></label><br>
+      <input type="text" id="Name" name="Name">
+    </p>
+
+    <p>
+      <label for="username"><b>Username:</b></label><br>
+      <input type="text" id="username" name="username" required>
+    </p>
+
+    <p>
+      <label for="email"><b>Email:</b></label><br>
+      <input type="email" id="email" name="email"required >
+    </p>
+
+    <p>
+      <label for="password"><b>Password:</b></label><br>
+      <input type="password" id="password" name="password"required size="12">
+    </p>
+
+    <p>
+      <label for="gender"><b>Gender:</b></label><br>
+      <input type="radio" id="gender" name="gender" value="Male"> Male
+      <input type="radio" id="gender" name="gender" value="Female"> Female
+    </p>
+
+    <p>
+      <label for="interests"><b>Interests:</b></label><br>
+      <select id="interests" name="interests">
+        <option value="">Select</option>
+        <option value="music">Music</option>
+        <option value="travel">Travel</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+      </select>
+    </p>
+
+    <p>
+      <input type="submit">
+      <input type="reset">
+    </p>
+
+  </fieldset>
+</form>
+
+</body>
+</html>
