@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+  <title>5 JavaScript Events</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: rgb(229, 235, 241);
+      text-align: center;
+      padding-top: 40px;
+    }
+    #box {
+      width: 160px;
+      height: 160px;
+      background-color: rgb(240, 128, 128);
+      margin: 25px auto;
+      line-height: 160px;
+      border-radius: 10px;
+    }
+    input, button, select {
+      padding: 8px;
+      margin: 12px;
+      border-radius: 6px;
+      border: 1px solid #444;
+    }
+    button {
+      background-color: #4477aa;
+      color: white;
+    }
+    button:hover {
+      background-color: #335577;
+    }
+  </style>
+</head>
+<body>
+  <h1>5 Different JavaScript Events</h1>
+  <button onclick="clickEvent()">Click Me</button>
+  <p id="clickOutput"></p>
+  <select id="colorSelect" onchange="changeEvent()">
+    <option value="">Choose a color</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Green">Green</option>
+  </select>
+
+  <p id="changeOutput"></p>
+  <input type="text" id="focusInput" placeholder="Focus here" onfocus="focusEvent()">
+  <p id="focusOutput"></p>
+
+  <div id="box" onmouseover="hoverEvent()">BOX</div>
+  <p id="hoverOutput"></p>
+
+  <input type="text" id="keyInput" placeholder="Press any key" onkeydown="keyEvent(event)">
+  <p id="keyOutput"></p>
+
+  <script>
+    function clickEvent() {
+      document.getElementById("clickOutput").innerHTML = "Button was clicked!";
+    }
+
+    function changeEvent() {
+      let color = document.getElementById("colorSelect").value;
+      document.getElementById("changeOutput").innerHTML = "You selected: " + color;
+    }
+
+    function focusEvent() {
+      document.getElementById("focusOutput").innerHTML = "Input box is focused!";
+    }
+
+    function hoverEvent() {
+      document.getElementById("hoverOutput").innerHTML = "Mouse is over the box!";
+    }
+
+    function keyEvent(e) {
+      document.getElementById("keyOutput").innerHTML = "You pressed: " + e.key;
+    }
+  </script>
+</body>
+</html>
